@@ -10,7 +10,7 @@ DELETE
 FROM Database_name.deletions
 WHERE deleted_by = UserID;
 
---Delete Audit Log
+-- Delete Audit Log
 DELETE
 FROM Database_name.activities
 Where user_id = UserID;
@@ -25,4 +25,5 @@ AND owned_by = UserID;
 DELETE
 FROM Database_name.pages
 WHERE deleted_at IS NOT NULL
+
 AND owned_by = UserID;
